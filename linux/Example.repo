@@ -1,0 +1,6 @@
+
+
+[base]
+name=base
+baseurl=file:///mnt
+gpgcheck=0
