@@ -10,8 +10,8 @@ jobs:
     steps:
     - name: Test Payload
       run: |
-        echo My name is P3TERX.
         echo Hello World!
+        echo "this is branch ${{ github.event.client_payload.branch }}" 
         echo ${{ github.event.action }}
         echo ${{ github.event.client_payload.branch }}
         echo ${{ github.event.client_payload.clone_url }}
