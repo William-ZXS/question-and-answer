@@ -1,8 +1,8 @@
 on: 
   repository_dispatch:
-  types:
-    - GitHub
-    - GitLab
+    types:
+      - GitHub
+      - GitLab
 
 jobs:
   run:
