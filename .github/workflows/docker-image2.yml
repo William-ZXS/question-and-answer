@@ -1,0 +1,20 @@
+on: 
+  repository_dispatch:
+  types:
+    - GitHub
+    - GitLab
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Test Payload
+      run: |
+        echo My name is P3TERX.
+        echo Hello World!
+        echo ${{ github.event.action }}
+        echo ${{ github.event.client_payload.branch }}
+        echo ${{ github.event.client_payload.clone_url }}
+        if [ ${{ github.event.action }} == 'GitHub' ];then
+          echo "github.event.action==GitHub"
+        fi  
